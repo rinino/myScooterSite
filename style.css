@@ -1,302 +1,664 @@
 :root {
-    --primary-color: #007bff; /* Blu vibrante */
-    --secondary-color: #6c757d; /* Grigio scuro */
-    --background-light: #f8f9fa; /* Grigio molto chiaro */
-    --text-dark: #343a40; /* Grigio scuro per il testo */
-    --text-light: #ffffff; /* Bianco per testo su sfondi scuri */
-    --border-radius: 8px;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Nuovi colori per il tema scuro e moderno */
+    --primary-dark: #1a1a1a;        /* Sfondo quasi nero, colore predominante */
+    --secondary-dark: #2c2c2c;      /* Grigio scuro per sezioni e card, crea profondità */
+    --accent-color: #00bcd4;        /* Verde acqua vibrante per accenti, link, bottoni, titoli */
+    --text-light: #f0f0f0;          /* Testo chiaro per la leggibilità su sfondi scuri */
+    --text-muted: #b0b0b0;          /* Testo secondario, meno in evidenza */
+    --border-color: #444444;        /* Bordi sottili per definire gli elementi */
+    --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombre più pronunciate per contrasto */
+    --border-radius: 10px;          /* Angoli più arrotondati per un look morbido */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7; /* Leggermente più spazio tra le righe per la leggibilità */
     margin: 0;
     padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-dark);
+    background-color: var(--primary-dark); /* Sfondo principale nero */
+    color: var(--text-light); /* Testo chiaro di default per tutto il corpo */
 }
 
+/* Header */
 header {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 2.5rem 0;
+    background-color: var(--secondary-dark); /* Sfondo grigio scuro per l'header */
+    padding: 3rem 0; /* Più padding per un look più spazioso */
     text-align: center;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-dark); /* Ombra più scura */
+    border-bottom: 2px solid var(--border-color); /* Bordo inferiore sottile */
+    color: var(--text-light); /* Assicurati che il testo sia chiaro */
+}
+
+/* Stili per il Loghetto nell'Header */
+.header-logo {
+    max-width: 120px; /* Logo leggermente più piccolo per equilibrio */
+    height: auto;
+    margin-bottom: 0.8rem; /* Spazio sotto il logo */
+    border-radius: 50%; /* Rende il logo rotondo, se quadrato */
+    border: 3px solid var(--accent-color); /* Bordo accentato attorno al logo */
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5); /* Ombra luminosa dall'accento */
+    transition: all 0.3s ease; /* Animazione fluida */
+}
+
+.header-logo:hover {
+    transform: scale(1.05) rotate(5deg); /* Effetto leggero all'hover */
+    box-shadow: 0 0 25px rgba(0, 188, 212, 0.8); /* Ombra più intensa all'hover */
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 3.5rem; /* Titolo più grande */
+    margin-bottom: 0.8rem;
+    color: var(--accent-color); /* Titolo principale con colore accentato */
+    letter-spacing: 2px; /* Spaziatura tra le lettere per un look moderno */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra leggera per il testo */
 }
 
 header p {
-    font-size: 1.25rem;
-    max-width: 800px;
+    font-size: 1.3rem; /* Testo più grande */
+    max-width: 850px; /* Larghezza massima aumentata */
     margin: 0 auto;
+    color: var(--text-muted); /* Testo leggermente meno in evidenza */
+    padding: 0 1.5rem; /* Padding laterale */
 }
 
+/* Contenitore principale */
 .container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+    max-width: 1100px; /* Leggermente più largo */
+    margin: 3rem auto; /* Più spazio sopra e sotto */
+    padding: 0 2rem; /* Padding laterale interno */
 }
 
+/* Sezioni generali (Funzionalità, Come Funziona, Versioni App) */
 section {
-    background-color: var(--text-light);
-    padding: 2.5rem;
-    margin-bottom: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    background-color: var(--secondary-dark); /* Sfondo grigio scuro per le sezioni */
+    padding: 3rem; /* Più padding */
+    margin-bottom: 3rem; /* Più spazio tra le sezioni */
+    border-radius: var(--border-radius); /* Angoli arrotondati */
+    box-shadow: var(--shadow-dark); /* Ombra scura */
+    border: 1px solid var(--border-color); /* Bordo sottile */
 }
 
 h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
+    font-size: 2.8rem; /* Titoli delle sezioni più grandi */
+    color: var(--text-light); /* Titoli delle sezioni chiari */
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem; /* Più spazio sotto il titolo */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* Grid per funzionalità e passi (Features Grid, How it Works Steps) */
 .features-grid, .how-it-works-steps {
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem; /* Più spazio tra gli elementi della griglia */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adattabile */
 }
 
 .feature-item, .step-item {
     text-align: center;
-    padding: 1.5rem;
-    background-color: var(--background-light);
+    padding: 2rem; /* Più padding */
+    background-color: var(--primary-dark); /* Sfondo leggermente più scuro per le card */
     border-radius: var(--border-radius);
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra sulla card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animazioni hover */
+}
+
+.feature-item:hover, .step-item:hover {
+    transform: translateY(-8px); /* Effetto "alza" all'hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Ombra più pronunciata all'hover */
 }
 
 .feature-item h3, .step-item h3 {
-    color: var(--secondary-color);
+    color: var(--accent-color); /* Titoli delle card accentati */
     margin-top: 0;
-    font-size: 1.3rem;
+    font-size: 1.6rem; /* Titoli card più grandi */
+    letter-spacing: 0.5px;
 }
 
 .feature-item p, .step-item p {
-    font-size: 0.95rem;
-    color: #555;
+    font-size: 1rem;
+    color: var(--text-muted); /* Testo delle card in grigio */
 }
 
+/* Call to Action principale */
 .call-to-action {
     text-align: center;
-    padding: 3rem 0;
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    padding: 4rem 0; /* Molto padding per una sezione prominente */
+    background-color: var(--accent-color); /* CTA con colore accentato per risaltare */
+    color: var(--primary-dark); /* Testo scuro sulla CTA per contrasto */
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-dark);
 }
 
 .call-to-action h2 {
-    color: var(--text-light);
+    color: var(--primary-dark); /* Titolo della CTA scuro */
+    font-size: 3rem;
+}
+
+.call-to-action p {
+    font-size: 1.4rem; /* Testo della CTA più grande */
+    color: var(--primary-dark);
+    margin-bottom: 2.5rem;
 }
 
 .btn {
     display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    padding: 0.8rem 2rem;
+    background-color: var(--primary-dark); /* Pulsante CTA scuro */
+    color: var(--accent-color); /* Testo del pulsante CTA accentato */
+    padding: 1rem 2.5rem; /* Padding più grande */
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    margin-top: 1.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border: 2px solid var(--primary-dark); /* Bordo per l'effetto hover */
 }
 
 .btn:hover {
-    background-color: #495057;
+    background-color: var(--secondary-dark); /* Sfondo più chiaro all'hover */
+    color: var(--accent-color);
+    transform: translateY(-3px); /* Effetto sollevamento */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    border-top: 1px solid #dee2e6;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-    header p {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-    h2 {
-        font-size: 1.7rem;
-    }
-    section {
-        padding: 1.5rem;
-    }
-    .btn {
-        padding: 0.7rem 1.8rem;
-        font-size: 1rem;
-    }
-}
-
-
-/* --- Stili per i Tab --- */
+/* Tab Navigation */
 .tabs {
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 2.5rem; /* Più spazio sotto i tab */
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
 }
 
 .tab-button {
     background-color: transparent;
     border: none;
-    padding: 1rem 1.5rem;
+    padding: 1.2rem 2rem; /* Più padding per i bottoni dei tab */
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Testo più grande */
     font-weight: 600;
-    color: var(--secondary-color);
+    color: var(--text-muted); /* Testo dei tab non attivi */
     transition: all 0.3s ease;
-    border-bottom: 2px solid transparent; /* Per la sottolineatura attiva */
-    margin: 0 0.5rem;
+    border-bottom: 3px solid transparent; /* Sottolineatura più spessa */
+    margin: 0 0.8rem;
+    outline: none; /* Rimuovi l'outline al focus per un look più pulito */
 }
 
 .tab-button:hover {
-    color: var(--primary-color);
-    border-bottom: 2px solid #ced4da;
+    color: var(--text-light); /* Testo chiaro all'hover */
+    border-bottom: 3px solid var(--border-color);
 }
 
 .tab-button.active {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    color: var(--accent-color); /* Testo del tab attivo accentato */
+    border-bottom: 3px solid var(--accent-color); /* Sottolineatura accentata */
 }
 
+/* Contenuto dei Tab */
 .tab-content {
-    padding: 2rem 1.5rem;
-    background-color: var(--background-light);
+    padding: 2.5rem; /* Più padding */
+    background-color: var(--primary-dark); /* Sfondo del contenuto dei tab */
     border-radius: var(--border-radius);
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-dark);
 }
 
 .tab-content h3 {
-    color: var(--primary-color);
+    color: var(--accent-color); /* Titoli interni ai tab accentati */
     text-align: center;
     margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+    font-size: 2rem; /* Titolo interno tab più grande */
 }
 
 .tab-content ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem; /* Più spazio sotto la lista */
 }
 
 .tab-content ul li {
-    background-color: var(--text-light);
-    padding: 0.8rem 1rem;
-    margin-bottom: 0.5rem;
-    border-left: 4px solid var(--primary-color);
+    background-color: var(--secondary-dark); /* Sfondo delle liste nelle card */
+    padding: 1rem 1.2rem; /* Più padding */
+    margin-bottom: 0.8rem;
+    border-left: 5px solid var(--accent-color); /* Bordo sinistro accentato più spesso */
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    font-size: 0.95rem;
-    color: var(--text-dark);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    color: var(--text-light);
 }
 
-/* Stili per i pulsanti di download all'interno dei tab */
+/* Galleria Immagini */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Immagini più grandi */
+    gap: 20px; /* Più spazio */
+    margin-top: 3rem; /* Più spazio sopra */
+    padding: 1.5rem;
+    background-color: var(--secondary-dark); /* Sfondo della galleria */
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-dark);
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--border-color); /* Bordo sottile attorno all'immagine */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); /* Zoom leggermente più marcato */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* CTA piccola all'interno dei tab */
 .call-to-action-small {
     text-align: center;
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background-color: var(--text-light); /* Sfondo più chiaro */
+    margin-top: 3rem; /* Più spazio sopra */
+    padding: 2rem; /* Più padding */
+    background-color: var(--primary-dark);
     border-radius: var(--border-radius);
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .call-to-action-small p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--text-light);
 }
 
 .btn-small {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 0.6rem 1.5rem;
+    background-color: var(--accent-color); /* Pulsante piccolo con colore accentato */
+    color: var(--primary-dark);
+    padding: 0.8rem 2rem;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: background-color 0.3s ease;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-small:hover {
-    background-color: #0056b3; /* Blu più scuro al hover */
+    background-color: #008c99; /* Tonalità più scura al hover per l'accento */
+    transform: translateY(-2px);
 }
 
-/* Responsive adjustments per i tab */
+/* --- Stili per il Footer (aggiustamenti) --- */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--secondary-dark);
+}
+
+.author-info {
+    /* NUOVE PROPRIETÀ per mettere social e donate in linea */
+    display: flex; /* Abilita Flexbox */
+    flex-direction: column; /* Impila gli elementi di default su mobile */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    padding: 1rem 0; /* Spazio interno per l'autore-info */
+}
+
+.author-info p {
+    margin-bottom: 0.8rem;
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    /* Rimuovi la margin-bottom se vuoi che si avvicini a donate-section */
+    margin-bottom: 1.5rem; /* Lascia un po' di spazio tra social e donate */
+}
+
+.social-links a {
+    color: var(--accent-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: var(--text-light);
+}
+
+/* --- Sezione Donazione nel Footer --- */
+.donate-section {
+    margin-top: 0; /* Rimuovi il margine superiore, sarà gestito dalla media query */
+    padding-top: 0; /* Rimuovi il padding superiore, sarà gestito dalla media query */
+    border-top: none; /* Rimuovi la linea tratteggiata di default */
+    width: auto; /* Lascia che la larghezza si adatti al contenuto */
+    max-width: none; /* Rimuovi il limite di larghezza predefinito */
+    display: flex; /* Assicurati che sia flexbox */
+    flex-direction: column;
+    align-items: center;
+}
+
+.donate-section p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.donate-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0070ba;
+    color: var(--text-light);
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.donate-btn i {
+    margin-right: 0.8rem;
+    font-size: 1.3em;
+}
+
+.donate-btn:hover {
+    background-color: #00457c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Regolazioni Responsive per il footer */
 @media (max-width: 768px) {
-    .tabs {
+    .author-info p {
+        font-size: 1rem;
+    }
+    .social-links {
+        gap: 1rem;
+    }
+    .social-links i {
+        font-size: 1.8em !important;
+    }
+    /* SU SCHERMI PIÙ PICCOLI, MANTIENI SOCIAL E DONATE IN COLONNA */
+    .author-info {
         flex-direction: column;
-        align-items: center;
     }
-    .tab-button {
-        width: 80%;
-        margin: 0.5rem 0;
+    .social-links {
+        margin-bottom: 1.5rem; /* Spazio tra social e donate su mobile */
     }
-    .tab-content {
-        padding: 1rem;
-    }
-    .tab-content h3 {
-        font-size: 1.5rem;
-    }
-    .tab-content ul li {
-        font-size: 0.9rem;
+    .donate-section {
+        padding-top: 1.5rem; /* Spazio tra le due sezioni su mobile */
+        border-top: 1px dashed var(--border-color); /* Linea di separazione su mobile */
     }
 }
 
+@media (min-width: 769px) {
+    /* SOLO SU SCHERMI GRANDI (> 768px), METTI SOCIAL E DONATE IN LINEA */
+    .author-info {
+        flex-direction: row; /* Metti gli elementi in riga */
+        justify-content: center; /* Centra tutto il blocco */
+        gap: 3rem; /* Spazio tra le due sezioni */
+        align-items: center; /* Allinea al centro verticalmente */
+        /* Rimuovi la riga dell'autore-info p se vuoi che sia solo icone/donate */
+        /* Oppure rendila una parte più piccola del layout flex */
+    }
 
-/* --- Stili per la Galleria Immagini --- */
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 2 o 3 colonne su desktop */
-    gap: 15px; /* Spazio tra le immagini */
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: var(--text-light); /* Sfondo per la galleria */
+    .author-info p {
+        /* Rimuovi margini che potrebbero disturbare l'allineamento orizzontale */
+        margin-bottom: 0;
+        margin-right: 2rem; /* Spazio tra il tuo nome e le icone/donate, se lo vuoi */
+    }
+
+    .social-links {
+        margin-top: 0; /* Rimuovi il margine superiore */
+        margin-bottom: 0; /* Rimuovi il margine inferiore */
+    }
+
+/* --- Sezione Donazione nel Footer --- */
+.donate-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--border-color);
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donate-section p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.donate-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--secondary-dark); /* CAMBIATO: Sfondo grigio scuro, meno appariscente */
+    color: var(--accent-color); /* CAMBIATO: Testo con colore accentato */
+    padding: 0.6rem 1.4rem; /* RIDOTTO: Meno padding per renderlo più piccolo */
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600; /* RIDOTTO: Grassetto leggermente meno pronunciato */
+    font-size: 0.95rem; /* RIDOTTO: Dimensione del testo più piccola */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease; /* Aggiunto color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombra più delicata */
+    border: 1px solid var(--border-color); /* Aggiunto un bordo sottile */
+}
+
+.donate-btn i {
+    margin-right: 0.6rem; /* RIDOTTO: Meno spazio tra icona e testo */
+    font-size: 1em; /* RIDOTTO: Icona proporzionata al testo */
+    color: var(--accent-color); /* Assicura che l'icona abbia il colore accentato */
+}
+
+.donate-btn:hover {
+    background-color: var(--primary-dark); /* CAMBIATO: Sfondo ancora più scuro all'hover */
+    color: var(--accent-light); /* Potresti definire un accent-light per un effetto più tenue, o lasciare accent-color */
+    transform: translateY(-2px); /* Effetto sollevamento più delicato */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra leggermente più visibile all'hover */
+    border-color: var(--accent-color); /* Bordo accentato all'hover */
+}
+
+/* Regolazioni Responsive per la sezione donazione (anche qui, renderemo più piccoli) */
+@media (max-width: 480px) {
+    .donate-section {
+        max-width: 90%;
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+    }
+    .donate-btn {
+        padding: 0.5rem 1.2rem; /* Ancora più piccolo su mobile */
+        font-size: 0.85rem;
+    }
+    .donate-btn i {
+        font-size: 0.9em;
+        margin-right: 0.5rem;
+    }
+}
+
+/* --- Stili per il Tab Merchandising (Futuro) --- */
+
+.merchandising-info {
+  padding: 2.5rem; /* Padding generoso */
+  background-color: var(--primary-dark); /* Sfondo scuro come le altre card */
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-dark);
+  text-align: center; /* Centra il contenuto del testo */
+}
+
+.merchandising-info h3 {
+  color: var(--accent-color); /* Titolo con colore accentato */
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.merchandising-info p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem; /* Spazio sotto i paragrafi */
+    max-width: 700px; /* Limita la larghezza del testo per leggibilità */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.merch-placeholder-img {
+    max-width: 300px; /* Dimensione massima per l'immagine placeholder */
+    height: auto;
     border-radius: var(--border-radius);
-    border: 1px solid #e9ecef;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-top: 2rem; /* Spazio sopra l'immagine */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
 }
 
-.image-gallery img {
-    width: 100%; /* L'immagine occupa tutta la larghezza della sua colonna */
-    height: auto; /* Mantiene le proporzioni */
-    display: block; /* Rimuove lo spazio extra sotto l'immagine */
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Piccola ombra per ogni immagine */
-    transition: transform 0.2s ease-in-out;
+.merch-placeholder-img:hover {
+    transform: scale(1.03); /* Piccolo effetto all'hover */
 }
 
-.image-gallery img:hover {
-    transform: scale(1.03); /* Piccolo zoom all'hover */
-}
 
-/* Responsive adjustments per la galleria */
+/* Regolazioni Responsive per il tab Merchandising */
 @media (max-width: 768px) {
-    .image-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* 2 colonne su schermi piccoli */
-        gap: 10px;
-        padding: 0.8rem;
-    }
+  .merchandising-info {
+    padding: 2rem;
+  }
+  .merchandising-info h3 {
+    font-size: 1.8rem;
+  }
+  .merchandising-info p {
+    font-size: 1rem;
+  }
+  .merch-placeholder-img {
+      max-width: 200px; /* Riduzione per mobile */
+  }
 }
 
 @media (max-width: 480px) {
-    .image-gallery {
-        grid-template-columns: 1fr; /* Una singola colonna su schermi molto piccoli */
+  .merchandising-info {
+    padding: 1.5rem;
+  }
+  .merchandising-info h3 {
+    font-size: 1.5rem;
+  }
+  .merchandising-info p {
+    font-size: 0.9rem;
+  }
+  .merch-placeholder-img {
+      max-width: 150px; /* Ulteriore riduzione per schermi molto piccoli */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
     }
+    section {
+        padding: 2.5rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* --- Stili per il Tab Merchandising (Futuro) --- */
+
+.merchandising-info {
+  padding: 2.5rem;
+  background-color: var(--primary-dark);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-dark);
+  text-align: center;
+}
+
+.merchandising-info h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.merchandising-info p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.merch-placeholder-img {
+    max-width: 200px; /* La dimensione massima dell'immagine */
+    height: auto;
+    /* NUOVE PROPRIETÀ PER L'EFFETTO LOGO */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    border: 3px solid var(--accent-color); /* Bordo accentato attorno all'immagine */
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5); /* Ombra luminosa dall'accento */
+    /* FINE NUOVE PROPRIETÀ */
+    margin-top: 2rem;
+    /* Rimuovi la vecchia box-shadow se presente, ora usiamo quella sopra */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+    /* Rimuovi il vecchio border se presente, ora usiamo quello sopra */
+    /* border: 1px solid var(--border-color); */
+    transition: all 0.3s ease; /* Transizione per tutti i cambiamenti, inclusi hover */
+}
+
+.merch-placeholder-img:hover {
+    transform: scale(1.05) rotate(5deg); /* Effetto leggero all'hover (come il logo) */
+    box-shadow: 0 0 25px rgba(0, 188, 212, 0.8); /* Ombra più intensa all'hover */
+}
+
+
+/* Regolazioni Responsive per il tab Merchandising */
+@media (max-width: 768px) {
+  .merchandising-info {
+    padding: 2rem;
+  }
+  .merchandising-info h3 {
+    font-size: 1.8rem;
+  }
+  .merchandising-info p {
+    font-size: 1rem;
+  }
+  .merch-placeholder-img {
+      max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .merchandising-info {
+    padding: 1.5rem;
+  }
+  .merchandising-info h3 {
+    font-size: 1.5rem;
+  }
+  .merchandising-info p {
+    font-size: 0.9rem;
+  }
+  .merch-placeholder-img {
+      max-width: 100px;
+  }
 }

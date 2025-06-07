@@ -6,10 +6,12 @@
     <title>myScooter - Gestisci i tuoi scooter e rifornimenti senza stress!</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
     <header>
+        <img src="images/loghetto1.jpg" alt="Logo myScooter" class="header-logo">
         <h1>myScooter</h1>
         <p>L'app definitiva per la gestione semplice e intelligente dei tuoi scooter e dei loro rifornimenti. Tieni traccia di tutto, dalla manutenzione (in futuro) ai consumi, direttamente dal tuo smartphone!</p>
     </header>
@@ -42,6 +44,7 @@
             <div class="tabs">
                 <button class="tab-button active" onclick="openTab(event, 'iOS')">myScooter iOS</button>
                 <button class="tab-button" onclick="openTab(event, 'Android')">myScooter Android</button>
+                 <button class="tab-button" onclick="openTab(event, 'Merchandising')">Merchandising</button> </div>
             </div>
 
             <div id="iOS" class="tab-content">
@@ -49,8 +52,7 @@
                 <p>Progettata per l'ecosistema Apple, myScooter su iOS offre un'esperienza fluida e nativa. Goditi l'interfaccia utente pulita e le prestazioni ottimizzate per il tuo iPhone.</p>
                 <ul>
                     <li>Integrazione perfetta con l'interfaccia iOS.</li>
-                    <li>Notifiche push personalizzate per promemoria manutenzione.</li>
-                    <li>Sincronizzazione (futura) con iCloud per backup sicuri dei dati.</li>
+                    <li>Notifiche push personalizzate per promemoria manutenzione. (in futuro)</li>
                     <li>Disponibile per iOS 15 e successivi.</li>
                 </ul>
 
@@ -71,7 +73,7 @@
             </div>
 
             <div id="Android" class="tab-content" style="display:none;">
-                <h3>myScooter per Android</h3>
+                <h3>myScooter per Android (WIP)</h3>
                 <p>myScooter su Android è pensata per offrire flessibilità e compatibilità con un'ampia gamma di dispositivi. Gestisci i tuoi scooter in modo efficiente, ovunque tu sia.</p>
                 <ul>
                     <li>Compatibilità estesa con diversi dispositivi Android.</li>
@@ -79,9 +81,17 @@
                     <li>Backup dei dati su Google Drive (futuro).</li>
                     <li>Disponibile per Android 10 e successivi.</li>
                 </ul>
-                 <div class="call-to-action-small">
+                   <div class="call-to-action-small">
                     <p>Scarica myScooter per Android:</p>
                     <a href="#" class="btn-small">Presto su Google Play!</a>
+                </div>
+            </div>
+
+            <div id="Merchandising" class="tab-content" style="display:none;">
+                <div class="merchandising-info">
+                    <h3>Prossimamente: Merchandising Ufficiale myScooter!</h3>
+                    <p>Resta sintonizzato per scoprire tutte le novità e le date di lancio. Non vediamo l'ora di condividere con te il nostro merchandising!</p>
+                    <img src="images/coming-soon-circle-design.png" alt="Immagine placeholder merchandising" class="merch-placeholder-img">
                 </div>
             </div>
         </section>
@@ -95,6 +105,23 @@
 
     <footer>
         <p>&copy; 2025 myScooter. Tutti i diritti riservati.</p>
+        <div class="author-info">
+            <p>Sviluppato con passione da Adriano Abbruzzese</p>
+            <div class="social-links">
+                <a href="www.linkedin.com/in/adrianoabbruzzese" target="_blank" aria-label="Profilo LinkedIn">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/rinino" target="_blank" aria-label="Repository GitHub del progetto">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+            <div class="donate-section">
+                <p>Ti piace myScooter? Offrimi un caffè!</p>
+                <a href="https://paypal.me/AdrianoAbbruzzese" target="_blank" class="donate-btn" aria-label="Dona con PayPal">
+                    <i class="fab fa-paypal"></i> Donate
+                </a>
+            </div>
+            </div>
     </footer>
 
     <script>
