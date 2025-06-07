@@ -37,24 +37,43 @@
             </div>
         </section>
 
-        <section id="come-funziona">
-            <h2>Come funziona myScooter</h2>
-            <div class="how-it-works-steps">
-                <div class="step-item">
-                    <h3>1. Scarica e Installa</h3>
-                    <p>Disponibile il prima possibile per iOS/Android!</p>
+        <section id="versioni-app">
+            <h2>Scopri myScooter per la tua piattaforma</h2>
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'iOS')">myScooter iOS</button>
+                <button class="tab-button" onclick="openTab(event, 'Android')">myScooter Android</button>
+            </div>
+
+            <div id="iOS" class="tab-content">
+                <h3>myScooter per iOS</h3>
+                <p>Progettata per l'ecosistema Apple, myScooter su iOS offre un'esperienza fluida e nativa. Goditi l'interfaccia utente pulita e le prestazioni ottimizzate per il tuo iPhone.</p>
+                <ul>
+                    <li>Integrazione perfetta con l'interfaccia iOS.</li>
+                    <li>Notifiche push personalizzate per promemoria manutenzione.</li>
+                    <li>Sincronizzazione (futura) con iCloud per backup sicuri dei dati.</li>
+                    <li>Disponibile per iOS 15 e successivi.</li>
+                </ul>
+                <div class="call-to-action-small">
+                    <p>Scarica myScooter per iOS:</p>
+                    <a href="#" class="btn-small">Presto sull'App Store!</a>
                 </div>
-                <div class="step-item">
-                    <h3>2. Aggiungi il tuo Scooter</h3>
-                    <p>Crea il profilo del tuo scooter in pochi secondi, inserendo i dettagli essenziali.</p>
-                </div>
-                <div class="step-item">
-                    <h3>3. Registra i Rifornimenti</h3>
-                    <p>Ogni volta che fai benzina, inserisci i dati in pochi tap per un tracciamento accurato.</p>
+            </div>
+
+            <div id="Android" class="tab-content" style="display:none;">
+                <h3>myScooter per Android</h3>
+                <p>myScooter su Android è pensata per offrire flessibilità e compatibilità con un'ampia gamma di dispositivi. Gestisci i tuoi scooter in modo efficiente, ovunque tu sia.</p>
+                <ul>
+                    <li>Compatibilità estesa con diversi dispositivi Android.</li>
+                    <li>Widget personalizzabili per un accesso rapido ai dati chiave.</li>
+                    <li>Backup dei dati su Google Drive (futuro).</li>
+                    <li>Disponibile per Android 10 e successivi.</li>
+                </ul>
+                 <div class="call-to-action-small">
+                    <p>Scarica myScooter per Android:</p>
+                    <a href="#" class="btn-small">Presto su Google Play!</a>
                 </div>
             </div>
         </section>
-
         <section class="call-to-action">
             <h2>Pronto a prendere il controllo del tuo scooter?</h2>
             <p>Non lasciare nulla al caso. Scarica myScooter oggi stesso e rendi la gestione del tuo mezzo un gioco da ragazzi!</p>
@@ -66,6 +85,27 @@
     <footer>
         <p>&copy; 2025 myScooter. Tutti i diritti riservati.</p>
     </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Nascondi tutti i tab-content
+            var i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Rimuovi la classe "active" da tutti i tab-button
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+            }
+
+            // Mostra il tab corrente e aggiungi la classe "active" al pulsante
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 
 </body>
 </html>

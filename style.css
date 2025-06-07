@@ -141,3 +141,120 @@ footer {
         font-size: 1rem;
     }
 }
+
+
+/* --- Stili per i Tab --- */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent; /* Per la sottolineatura attiva */
+    margin: 0 0.5rem;
+}
+
+.tab-button:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid #ced4da;
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.tab-content {
+    padding: 2rem 1.5rem;
+    background-color: var(--background-light);
+    border-radius: var(--border-radius);
+    border: 1px solid #e9ecef;
+}
+
+.tab-content h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.tab-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.tab-content ul li {
+    background-color: var(--text-light);
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+/* Stili per i pulsanti di download all'interno dei tab */
+.call-to-action-small {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--text-light); /* Sfondo più chiaro */
+    border-radius: var(--border-radius);
+    border: 1px solid #e9ecef;
+}
+
+.call-to-action-small p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #0056b3; /* Blu più scuro al hover */
+}
+
+/* Responsive adjustments per i tab */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tab-button {
+        width: 80%;
+        margin: 0.5rem 0;
+    }
+    .tab-content {
+        padding: 1rem;
+    }
+    .tab-content h3 {
+        font-size: 1.5rem;
+    }
+    .tab-content ul li {
+        font-size: 0.9rem;
+    }
+}
