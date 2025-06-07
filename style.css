@@ -611,24 +611,20 @@ footer {
 }
 
 .merch-placeholder-img {
-    max-width: 200px; /* La dimensione massima dell'immagine */
-    height: auto;
-    /* NUOVE PROPRIETÀ PER L'EFFETTO LOGO */
-    border-radius: 50%; /* Rende l'immagine circolare */
-    border: 3px solid var(--accent-color); /* Bordo accentato attorno all'immagine */
-    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5); /* Ombra luminosa dall'accento */
-    /* FINE NUOVE PROPRIETÀ */
-    margin-top: 2rem;
-    /* Rimuovi la vecchia box-shadow se presente, ora usiamo quella sopra */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
-    /* Rimuovi il vecchio border se presente, ora usiamo quello sopra */
-    /* border: 1px solid var(--border-color); */
-    transition: all 0.3s ease; /* Transizione per tutti i cambiamenti, inclusi hover */
+    max-width: 200px; /* Dimensione desktop */
+    height: auto; /* Fondamentale per mantenere le proporzioni */
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+    transition: all 0.3s ease;
+    /* Assicurati che non ci siano altre regole che sovrascrivono la larghezza qui */
+    display: block; /* Assicurati che sia un elemento di blocco per max-width */
+    margin: 2rem auto 0 auto; /* Centra l'immagine orizzontalmente e dà margine superiore */
 }
 
 .merch-placeholder-img:hover {
-    transform: scale(1.05) rotate(5deg); /* Effetto leggero all'hover (come il logo) */
-    box-shadow: 0 0 25px rgba(0, 188, 212, 0.8); /* Ombra più intensa all'hover */
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 0 25px rgba(0, 188, 212, 0.8);
 }
 
 
@@ -644,11 +640,13 @@ footer {
     font-size: 1rem;
   }
   .merch-placeholder-img {
-      max-width: 150px;
+      max-width: 150px; /* RIDOTTO: Per tablet e schermi medi */
+      /* Aggiungiamo !important per forzare l'applicazione se necessario, anche se di solito non serve se le media query sono ben strutturate */
+      /* max-width: 150px !important; */
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* Questa media query è specifica per gli iPhone più vecchi e schermi molto piccoli */
   .merchandising-info {
     padding: 1.5rem;
   }
@@ -659,7 +657,52 @@ footer {
     font-size: 0.9rem;
   }
   .merch-placeholder-img {
-      max-width: 100px;
+      max-width: 100px; /* RIDOTTO: Per schermi molto piccoli (iPhone) */
+      /* max-width: 100px !important; */
   }
 }
+}
+
+/* --- Stili per il Pulsante "Torna su" --- */
+#backToTopBtn {
+    display: none; /* Nascosto di default */
+    position: fixed; /* Fisso nella viewport */
+    bottom: 2rem; /* Distanza dal fondo */
+    right: 2rem; /* Distanza dal lato destro */
+    z-index: 99; /* Assicura che sia sopra gli altri elementi */
+    font-size: 1.5rem; /* Dimensione dell'icona */
+    background-color: var(--accent-color); /* Colore di sfondo accentato */
+    color: var(--primary-dark); /* Colore della freccia scuro */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.8rem 1rem; /* Padding per una buona dimensione del bottone */
+    border-radius: 50%; /* Rende il bottone circolare */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra discreta */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transizioni fluide */
+}
+
+#backToTopBtn:hover {
+    background-color: var(--accent-light); /* Colore più chiaro all'hover */
+    transform: translateY(-5px); /* Effetto leggero di sollevamento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Ombra più pronunciata all'hover */
+}
+
+/* Regolazioni Responsive per il pulsante "Torna su" */
+@media (max-width: 768px) {
+    #backToTopBtn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        font-size: 1.3rem;
+        padding: 0.7rem 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #backToTopBtn {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1.1rem;
+        padding: 0.6rem 0.8rem;
+    }
 }

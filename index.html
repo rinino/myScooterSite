@@ -49,6 +49,7 @@
 
             <div id="iOS" class="tab-content">
                 <h3>myScooter per iOS</h3>
+                <h4>(in attesa di approvazione sullo store!!!)</h4>
                 <p>Progettata per l'ecosistema Apple, myScooter su iOS offre un'esperienza fluida e nativa. Goditi l'interfaccia utente pulita e le prestazioni ottimizzate per il tuo iPhone.</p>
                 <ul>
                     <li>Integrazione perfetta con l'interfaccia iOS.</li>
@@ -124,25 +125,45 @@
             </div>
     </footer>
 
+    <button id="backToTopBtn" title="Torna su">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script>
+        // Il tuo script esistente per i tab openTab(evt, tabName)
         function openTab(evt, tabName) {
-            // Nascondi tutti i tab-content
             var i, tabcontent, tabbuttons;
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
-
-            // Rimuovi la classe "active" da tutti i tab-button
             tabbuttons = document.getElementsByClassName("tab-button");
             for (i = 0; i < tabbuttons.length; i++) {
                 tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
             }
-
-            // Mostra il tab corrente e aggiungi la classe "active" al pulsante
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
+
+        // Nuovo script per il pulsante "Torna su"
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // Mostra il pulsante quando si scorre in giù di 20px dalla cima
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Quando l'utente clicca sul pulsante, scorri fino all'inizio del documento
+        backToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // Animazione di scorrimento fluida
+            });
+        });
     </script>
 
 </body>
