@@ -258,3 +258,45 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+
+/* --- Stili per la Galleria Immagini --- */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 2 o 3 colonne su desktop */
+    gap: 15px; /* Spazio tra le immagini */
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--text-light); /* Sfondo per la galleria */
+    border-radius: var(--border-radius);
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.image-gallery img {
+    width: 100%; /* L'immagine occupa tutta la larghezza della sua colonna */
+    height: auto; /* Mantiene le proporzioni */
+    display: block; /* Rimuove lo spazio extra sotto l'immagine */
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Piccola ombra per ogni immagine */
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.03); /* Piccolo zoom all'hover */
+}
+
+/* Responsive adjustments per la galleria */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* 2 colonne su schermi piccoli */
+        gap: 10px;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr; /* Una singola colonna su schermi molto piccoli */
+    }
+}
