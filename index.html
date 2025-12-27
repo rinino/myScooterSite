@@ -3,45 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myScooter - Supporto e Gestione Scooter</title>
+    <title>myScooter - Gestione e Supporto</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Stili aggiuntivi per la sezione Supporto e miglioramenti */
-        .support-section {
-            padding: 4rem 2rem;
-            background-color: #f9f9f9;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        .support-details {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .support-details h3 { color: #333; margin-top: 1.5rem; }
-        .support-email { 
-            font-size: 1.2rem; 
-            font-weight: 600; 
-            color: #007aff; 
-            text-decoration: none;
-        }
-        .footer-nav { margin-bottom: 1rem; }
-        .footer-nav a { color: #666; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
-        .footer-nav a:hover { text-decoration: underline; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
     <header>
         <img src="images/loghetto1.jpg" alt="Logo myScooter" class="header-logo">
         <h1>myScooter</h1>
-        <p>L'app definitiva per la gestione semplice e intelligente dei tuoi scooter e dei loro rifornimenti. Tieni traccia di tutto, dalla manutenzione ai consumi, direttamente dal tuo smartphone!</p>
+        <p>L'app definitiva per la gestione intelligente dei tuoi scooter. Tieni traccia di rifornimenti, consumi e manutenzione in un unico posto.</p>
     </header>
 
     <div class="container">
@@ -49,175 +21,113 @@
             <h2>Funzionalità principali</h2>
             <div class="features-grid">
                 <div class="feature-item">
-                    <h3>Gestione Scooter Multipli</h3>
-                    <p>Aggiungi e gestisci facilmente tutti i tuoi scooter in un unico posto, con dettagli personalizzati per ognuno.</p>
+                    <h3><i class="fas fa-motorcycle"></i><br>Multi-Scooter</h3>
+                    <p>Gestisci più mezzi contemporaneamente con profili personalizzati.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Tracciamento Rifornimenti</h3>
-                    <p>Registra ogni rifornimento con data, quantità, costo e chilometri. Calcola automaticamente i consumi.</p>
+                    <h3><i class="fas fa-gas-pump"></i><br>Rifornimenti</h3>
+                    <p>Monitora costi e litri. Calcoliamo noi la media dei consumi per te.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Promemoria Manutenzione - WIP</h3>
-                    <p>Imposta promemoria per scadenze importanti come tagliandi, revisioni e cambi gomme, per non dimenticare mai nulla.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Interfaccia Intuitiva</h3>
-                    <p>Un design pulito e facile da usare per una gestione del tuo scooter senza stress.</p>
+                    <h3><i class="fas fa-tools"></i><br>Manutenzione</h3>
+                    <p>Promemoria per tagliandi e scadenze tecniche (prossimamente).</p>
                 </div>
             </div>
         </section>
 
         <section id="versioni-app">
-            <h2>Scopri myScooter per la tua piattaforma</h2>
+            <h2>Piattaforme supportate</h2>
             <div class="tabs">
-                <button class="tab-button active" onclick="openTab(event, 'iOS')">myScooter iOS</button>
-                <button class="tab-button" onclick="openTab(event, 'Android')">myScooter Android</button>
+                <button class="tab-button active" onclick="openTab(event, 'iOS')">iOS</button>
+                <button class="tab-button" onclick="openTab(event, 'Android')">Android</button>
+                <button class="tab-button" onclick="openTab(event, 'Merch')">Merchandising</button>
             </div>
 
             <div id="iOS" class="tab-content">
                 <h3>myScooter per iOS</h3>
-                <h4>(In attesa di approvazione sullo store)</h4>
-                <p>Progettata per l'ecosistema Apple, myScooter su iOS offre un'esperienza fluida e nativa. Goditi l'interfaccia utente pulita e le prestazioni ottimizzate per il tuo iPhone.</p>
-                <ul>
-                    <li>Integrazione perfetta con l'interfaccia iOS.</li>
-                    <li>Notifiche push personalizzate per promemoria manutenzione (in futuro).</li>
-                    <li>Disponibile per iOS 15 e successivi.</li>
-                </ul>
-
+                <p>Esperienza fluida e nativa per iPhone (iOS 15+).</p>
                 <div class="image-gallery">
-                    <img src="ios-images/1.PNG" alt="Schermata 1 di myScooter iOS">
-                    <img src="ios-images/2.PNG" alt="Schermata 2 di myScooter iOS">
-                    <img src="ios-images/3.PNG" alt="Schermata 3 di myScooter iOS">
-                    <img src="ios-images/4.PNG" alt="Schermata 4 di myScooter iOS">
-                    <img src="ios-images/5.PNG" alt="Schermata 5 di myScooter iOS">
-                    <img src="ios-images/6.PNG" alt="Schermata 6 di myScooter iOS">
-                    <img src="ios-images/7.PNG" alt="Schermata 7 di myScooter iOS">
-                    <img src="ios-images/8.PNG" alt="Schermata 8 di myScooter iOS">
+                    <img src="ios-images/1.PNG" alt="Screen 1">
+                    <img src="ios-images/2.PNG" alt="Screen 2">
+                    <img src="ios-images/3.PNG" alt="Screen 3">
+                    <img src="ios-images/4.PNG" alt="Screen 4">
                 </div>
-                <div class="call-to-action-small">
-                    <p>Scarica myScooter per iOS:</p>
-                    <a href="#" class="btn-small">Presto sull'App Store!</a>
+                <div style="text-align:center; margin-top:2rem;">
+                    <a href="#" class="btn-small">Presto su App Store</a>
                 </div>
             </div>
 
             <div id="Android" class="tab-content" style="display:none;">
-                <h3>myScooter per Android (WIP)</h3>
-                <p>myScooter su Android è pensata per offrire flessibilità e compatibilità con un'ampia gamma di dispositivi. Gestisci i tuoi scooter in modo efficiente, ovunque tu sia.</p>
-                <ul>
-                    <li>Compatibilità estesa con diversi dispositivi Android.</li>
-                    <li>Widget personalizzabili per un accesso rapido ai dati chiave.</li>
-                    <li>Backup dei dati su Google Drive (futuro).</li>
-                    <li>Disponibile per Android 10 e successivi.</li>
-                </ul>
-                <div class="call-to-action-small">
-                    <p>Scarica myScooter per Android:</p>
-                    <a href="#" class="btn-small">Presto su Google Play!</a>
+                <h3>myScooter per Android</h3>
+                <p>Compatibilità estesa e widget per la tua home. In fase di sviluppo.</p>
+                <div style="text-align:center; margin-top:2rem;">
+                    <a href="#" class="btn-small">In arrivo su Play Store</a>
                 </div>
             </div>
+
+            <div id="Merch" class="tab-content" style="display:none;">
+                <h3>Coming Soon</h3>
+                <p>Il merchandising ufficiale di myScooter arriverà presto!</p>
+            </div>
         </section>
 
-        <section id="supporto" class="support-section">
-            <h2>Supporto e Assistenza</h2>
+        <section id="supporto">
+            <h2>Supporto Tecnico</h2>
             <div class="support-details">
-                <p>Hai riscontrato un problema, hai suggerimenti o hai bisogno di aiuto con l'app <strong>myScooter</strong>? Il nostro team di assistenza è pronto ad aiutarti.</p>
-                
-                <h3>📩 Contattaci via Email</h3>
-                <p>Per qualsiasi richiesta di supporto tecnico, scrivi a:</p>
+                <p>Hai bisogno di assistenza o vuoi segnalare un problema? Contattaci direttamente:</p>
                 <a href="mailto:adriano.abbruzzese@gmail.com" class="support-email">adriano.abbruzzese@gmail.com</a>
-                <p><small>Rispondiamo solitamente entro 24-48 ore lavorative.</small></p>
-
-                <h3>🛠️ Segnala un Bug</h3>
-                <p>Se preferisci, puoi aprire una segnalazione tecnica direttamente sulla nostra pagina GitHub:</p>
-                <a href="https://github.com/rinino" target="_blank" class="btn-small" style="display: inline-block; margin-top: 10px;">Vai a GitHub Issues</a>
+                <p>Il nostro team risponde solitamente entro 24 ore.</p>
+                <br>
+                <a href="https://github.com/rinino" target="_blank" class="btn-small">Segnala Bug su GitHub</a>
             </div>
         </section>
 
-        <section id="privacy" class="privacy-section">
-            <h2>La Tua Privacy è la Nostra Priorità</h2>
-            <p>In myScooter, crediamo che i tuoi dati debbano rimanere tuoi. L'applicazione è stata progettata con un approccio "Privacy-First".</p>
-            
+        <section id="privacy">
+            <h2>Privacy Policy</h2>
             <div class="privacy-details">
-                <h3>🚫 Nessun Invio a Terze Parti</h3>
-                <p>Nessuno dei tuoi dati (dettagli dello scooter, rifornimenti, costi, chilometri) viene inviato a server esterni o terze parti.</p>
-                
-                <h3>🔒 Archiviazione Locale dei Dati</h3>
-                <p>Tutti i dati inseriti vengono **salvati esclusivamente sul tuo dispositivo**. Se disinstalli l'app senza un backup manuale, i dati verranno rimossi definitivamente.</p>
-                
-                <h3>💡 Controllo Totale</h3>
-                <p>Non è necessaria una connessione internet per utilizzare le funzionalità principali dell'app.</p>
+                <p><strong>I tuoi dati non lasciano mai il telefono.</strong></p>
+                <p>myScooter salva ogni informazione localmente sul tuo dispositivo. Non usiamo server esterni e non vendiamo i tuoi dati a terze parti.</p>
             </div>
-        </section>
-        
-        <section class="call-to-action">
-            <h2>Pronto a prendere il controllo del tuo scooter?</h2>
-            <p>Scarica myScooter oggi stesso e rendi la gestione del tuo mezzo un gioco da ragazzi!</p>
-            <a href="#" class="btn">Scarica per Android</a>
-            <a href="#" class="btn" style="margin-left: 1rem;">Scarica per iOS</a>
         </section>
     </div>
 
     <footer>
-        <nav class="footer-nav">
-            <a href="#funzionalita">Funzionalità</a> | 
-            <a href="#supporto">Supporto</a> | 
-            <a href="#privacy">Privacy Policy</a>
-        </nav>
-        <p>&copy; 2025 myScooter. Tutti i diritti riservati.</p>
         <div class="author-info">
-            <p>Sviluppato con passione da Adriano Abbruzzese</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/adrianoabbruzzese" target="_blank" aria-label="Profilo LinkedIn">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                </a>
-                <a href="https://github.com/rinino" target="_blank" aria-label="Repository GitHub del progetto">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
+            <div>
+                <p>Sviluppato da <strong>Adriano Abbruzzese</strong></p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/adrianoabbruzzese" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/rinino" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                </div>
             </div>
-            <div class="donate-section">
-                <p>Ti piace myScooter? Offrimi un caffè!</p>
-                <a href="https://paypal.me/AdrianoAbbruzzese" target="_blank" class="donate-btn" aria-label="Dona con PayPal">
-                    <i class="fab fa-paypal"></i> Donate
+            <div>
+                <p>Ti piace il progetto?</p>
+                <a href="https://paypal.me/AdrianoAbbruzzese" target="_blank" class="donate-btn">
+                    <i class="fab fa-paypal"></i> Offrimi un caffè
                 </a>
             </div>
         </div>
+        <p style="margin-top:2rem; font-size:0.8rem;">&copy; 2025 myScooter. Tutti i diritti riservati.</p>
     </footer>
 
-    <button id="backToTopBtn" title="Torna su">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <button id="backToTopBtn" title="Torna su"><i class="fas fa-arrow-up"></i></button>
 
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tabbuttons;
             tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
+            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
             tabbuttons = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tabbuttons.length; i++) {
-                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
-            }
+            for (i = 0; i < tabbuttons.length; i++) { tabbuttons[i].className = tabbuttons[i].className.replace(" active", ""); }
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
 
-        const backToTopBtn = document.getElementById("backToTopBtn");
-
+        const btn = document.getElementById("backToTopBtn");
         window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopBtn.style.display = "block";
-            } else {
-                backToTopBtn.style.display = "none";
-            }
+            btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
         };
-
-        backToTopBtn.addEventListener("click", function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
+        btn.onclick = function() { window.scrollTo({top: 0, behavior: "smooth"}); };
     </script>
-
 </body>
 </html>
