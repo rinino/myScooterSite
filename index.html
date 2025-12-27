@@ -29,7 +29,6 @@
             scroll-behavior: smooth;
         }
 
-        /* --- Header --- */
         header {
             background-color: var(--secondary-dark);
             padding: 4rem 1rem;
@@ -46,25 +45,10 @@
             margin-bottom: 1rem;
         }
 
-        header h1 {
-            font-size: 3.5rem;
-            margin: 0;
-            color: var(--accent-color);
-            letter-spacing: 2px;
-        }
+        header h1 { font-size: 3.5rem; margin: 0; color: var(--accent-color); letter-spacing: 2px; }
+        header p { color: var(--text-muted); max-width: 700px; margin: 1rem auto 0; }
 
-        header p {
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 1rem auto 0;
-        }
-
-        /* --- Container & Sections --- */
-        .container {
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-        }
+        .container { max-width: 1100px; margin: 3rem auto; padding: 0 1.5rem; }
 
         section {
             background-color: var(--secondary-dark);
@@ -75,14 +59,8 @@
             border: 1px solid var(--border-color);
         }
 
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--text-light);
-        }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: var(--text-light); }
 
-        /* --- Grid System --- */
         .features-grid, .support-grid {
             display: grid;
             gap: 2rem;
@@ -101,22 +79,11 @@
         .feature-item:hover, .support-item:hover {
             transform: translateY(-10px);
             border-color: var(--accent-color);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         }
 
-        .feature-item i, .support-item i {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
-        }
+        .feature-item i, .support-item i { font-size: 3rem; color: var(--accent-color); margin-bottom: 1.5rem; }
 
-        /* --- Tabs --- */
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2.5rem;
-            gap: 1rem;
-        }
+        .tabs { display: flex; justify-content: center; margin-bottom: 2.5rem; gap: 1rem; }
 
         .tab-button {
             background: transparent;
@@ -130,19 +97,11 @@
             transition: 0.3s;
         }
 
-        .tab-button.active {
-            color: var(--accent-color);
-            border-bottom-color: var(--accent-color);
-        }
+        .tab-button.active { color: var(--accent-color); border-bottom-color: var(--accent-color); }
 
-        .tab-content {
-            padding: 2rem;
-            background-color: var(--primary-dark);
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border-color);
-        }
+        .tab-content { padding: 2rem; background-color: var(--primary-dark); border-radius: var(--border-radius); border: 1px solid var(--border-color); }
 
-        /* --- Image Gallery Fix --- */
+        /* --- Galleria Screenshot Fixata --- */
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -152,99 +111,32 @@
 
         .image-gallery img {
             width: 100%;
-            height: 350px; /* Altezza fissa per ordine visivo */
+            height: 380px; /* Altezza ottimale per screenshot mobile */
             object-fit: cover;
             border-radius: 8px;
             border: 2px solid var(--border-color);
             transition: 0.3s;
+            cursor: pointer;
         }
 
-        .image-gallery img:hover {
-            border-color: var(--accent-color);
-            transform: scale(1.02);
-        }
+        .image-gallery img:hover { border-color: var(--accent-color); transform: scale(1.02); }
 
-        /* --- Form Supporto --- */
-        .support-form {
-            max-width: 600px;
-            margin: 3rem auto 0;
-            padding: 2.5rem;
-            background: var(--primary-dark);
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border-color);
-        }
-
+        .support-form { max-width: 600px; margin: 3rem auto 0; padding: 2.5rem; background: var(--primary-dark); border-radius: var(--border-radius); border: 1px solid var(--border-color); }
         .form-group { margin-bottom: 1.5rem; text-align: left; }
         .form-group label { display: block; margin-bottom: 0.5rem; color: var(--accent-color); font-weight: 600; }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-            background: var(--secondary-dark);
-            color: white;
-            font-family: inherit;
-        }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--secondary-dark); color: white; font-family: inherit; }
 
-        .btn-submit {
-            width: 100%;
-            background: var(--accent-color);
-            color: var(--primary-dark);
-            padding: 1rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
+        .btn-submit { width: 100%; background: var(--accent-color); color: var(--primary-dark); padding: 1rem; border: none; border-radius: 50px; font-weight: 700; cursor: pointer; transition: 0.3s; }
         .btn-submit:hover { background: var(--accent-hover); transform: translateY(-2px); }
 
-        /* --- Footer --- */
-        footer {
-            background-color: var(--secondary-dark);
-            padding: 4rem 1rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .author-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-
+        footer { background-color: var(--secondary-dark); padding: 4rem 1rem; text-align: center; border-top: 1px solid var(--border-color); }
+        .author-box { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
         .social-links a { color: var(--accent-color); margin: 0 1rem; transition: 0.3s; }
-        .social-links a:hover { color: white; }
+        .donate-link { background: #0070ba; color: white; padding: 0.8rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; }
 
-        .donate-link {
-            background: #0070ba;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-        }
+        #backToTopBtn { display: none; position: fixed; bottom: 2rem; right: 2rem; background: var(--accent-color); color: var(--primary-dark); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; z-index: 1000; }
 
-        #backToTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--accent-color);
-            color: var(--primary-dark);
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1000;
-        }
-
-        @media (min-width: 768px) {
-            .author-box { flex-direction: row; justify-content: center; gap: 6rem; }
-        }
+        @media (min-width: 768px) { .author-box { flex-direction: row; justify-content: center; gap: 6rem; } }
     </style>
 </head>
 <body>
@@ -252,28 +144,16 @@
     <header>
         <img src="images/loghetto1.jpg" alt="Logo myScooter" class="header-logo">
         <h1>myScooter</h1>
-        <p>L'app definitiva per gestire i tuoi scooter, monitorare i rifornimenti e analizzare i consumi con un'interfaccia moderna e intuitiva.</p>
+        <p>Gestisci i tuoi scooter, monitora i rifornimenti e analizza i consumi.</p>
     </header>
 
     <div class="container">
         <section id="funzionalita">
             <h2>Funzionalità principali</h2>
             <div class="features-grid">
-                <div class="feature-item">
-                    <i class="fas fa-motorcycle"></i>
-                    <h3>Multi-Scooter</h3>
-                    <p>Gestisci un numero illimitato di mezzi con profili dedicati e dettagli tecnici personalizzati.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-gas-pump"></i>
-                    <h3>Rifornimenti</h3>
-                    <p>Registra litri e costi. L'app calcola automaticamente i km/l e la spesa mensile.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-tools"></i>
-                    <h3>Manutenzione</h3>
-                    <p>Tieni traccia di tagliandi e scadenze (funzionalità in fase di rilascio).</p>
-                </div>
+                <div class="feature-item"><i class="fas fa-motorcycle"></i><h3>Multi-Scooter</h3><p>Gestisci un numero illimitato di mezzi.</p></div>
+                <div class="feature-item"><i class="fas fa-gas-pump"></i><h3>Rifornimenti</h3><p>Registra litri e costi. L'app calcola i km/l.</p></div>
+                <div class="feature-item"><i class="fas fa-tools"></i><h3>Manutenzione</h3><p>Tieni traccia di tagliandi e scadenze.</p></div>
             </div>
         </section>
 
@@ -285,22 +165,20 @@
             </div>
 
             <div id="iOS" class="tab-content">
-                <h3 style="text-align: center; color: var(--accent-color);">myScooter per iPhone</h3>
-                <p style="text-align: center;">Performance elevate e design nativo. Richiede iOS 15.0 o versioni successive.</p>
-                
+                <h3 style="text-align: center; color: var(--accent-color);">Anteprima iOS</h3>
                 <div class="image-gallery">
-                    <img src="ios-images/1.PNG" alt="Screen 1">
-                    <img src="ios-images/2.PNG" alt="Screen 2">
-                    <img src="ios-images/3.PNG" alt="Screen 3">
-                    <img src="ios-images/4.PNG" alt="Screen 4">
-                    <img src="ios-images/5.PNG" alt="Screen 5">
-                    <img src="ios-images/6.PNG" alt="Screen 6">
+                    <img src="ios-images/1.PNG" alt="Screenshot 1">
+                    <img src="ios-images/2.PNG" alt="Screenshot 2">
+                    <img src="ios-images/3.PNG" alt="Screenshot 3">
+                    <img src="ios-images/4.PNG" alt="Screenshot 4">
+                    <img src="ios-images/5.PNG" alt="Screenshot 5">
+                    <img src="ios-images/6.PNG" alt="Screenshot 6">
                 </div>
             </div>
 
             <div id="Android" class="tab-content" style="display:none;">
-                <h3 style="text-align: center; color: var(--accent-color);">myScooter per Android</h3>
-                <p style="text-align: center;">Attualmente in fase di sviluppo. Presto disponibile su Google Play Store.</p>
+                <h3 style="text-align: center; color: var(--accent-color);">Android</h3>
+                <p style="text-align: center;">Presto disponibile su Google Play Store.</p>
             </div>
         </section>
 
@@ -309,30 +187,28 @@
             <div class="support-grid">
                 <div class="support-item">
                     <i class="fas fa-envelope-open-text"></i>
-                    <h3>Email di Supporto</h3>
-                    <p>Per assistenza tecnica diretta:</p>
-                    <a href="mailto:adriano.abbruzzese@gmail.com" style="color:var(--accent-color); font-weight:bold; text-decoration:none; font-size:1.1rem;">adriano.abbruzzese@gmail.com</a>
+                    <h3>Email</h3>
+                    <a href="mailto:adriano.abbruzzese@gmail.com" style="color:var(--accent-color); text-decoration:none;">adriano.abbruzzese@gmail.com</a>
                 </div>
                 <div class="support-item">
                     <i class="fas fa-code-branch"></i>
-                    <h3>Sviluppo</h3>
-                    <p>Segnala bug o suggerisci feature:</p>
-                    <a href="https://github.com/rinino" target="_blank" style="color:var(--accent-color); font-weight:bold; text-decoration:none;">GitHub Repository</a>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/rinino" target="_blank" style="color:var(--accent-color); text-decoration:none;">Repository Bug Report</a>
                 </div>
             </div>
 
             <div class="support-form">
-                <h3 style="text-align: center; color: var(--accent-color); margin-top: 0;">Invia un messaggio</h3>
+                <h3 style="text-align: center; color: var(--accent-color); margin-top: 0;">Modulo di Contatto</h3>
                 <form action="https://formspree.io/f/adriano.abbruzzese@gmail.com" method="POST">
                     <div class="form-group">
-                        <label for="email">La tua Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Inserisci la tua email...">
+                        <label>Email</label>
+                        <input type="email" name="email" required placeholder="La tua email...">
                     </div>
                     <div class="form-group">
-                        <label for="message">Come possiamo aiutarti?</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Descrivi qui la tua richiesta..."></textarea>
+                        <label>Messaggio</label>
+                        <textarea name="message" rows="4" required placeholder="Come possiamo aiutarti?"></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">Invia Messaggio</button>
+                    <button type="submit" class="btn-submit">Invia Richiesta</button>
                 </form>
             </div>
         </section>
@@ -340,8 +216,7 @@
         <section id="privacy">
             <h2>Privacy Policy</h2>
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <p><strong>La tua privacy è fondamentale.</strong> myScooter è un'applicazione "Offline-First": tutti i dati inseriti (veicoli, rifornimenti, km) vengono salvati esclusivamente nella memoria locale del tuo dispositivo.</p>
-                <p>Nessun dato viene trasmesso a server esterni o terze parti.</p>
+                <p>myScooter salva tutti i dati esclusivamente nella memoria locale del tuo dispositivo. Nessun dato viene trasmesso a server esterni.</p>
             </div>
         </section>
     </div>
@@ -356,19 +231,14 @@
                 </div>
             </div>
             <div>
-                <p>Supporta il progetto</p>
-                <a href="https://paypal.me/AdrianoAbbruzzese" target="_blank" class="donate-link">
-                    <i class="fab fa-paypal"></i> Offrimi un caffè
-                </a>
+                <a href="https://paypal.me/AdrianoAbbruzzese" target="_blank" class="donate-link"><i class="fab fa-paypal"></i> Offrimi un caffè</a>
             </div>
         </div>
-        <p style="margin-top: 3rem; color: var(--text-muted); font-size: 0.8rem;">&copy; 2025 myScooter. Tutti i diritti riservati.</p>
     </footer>
 
     <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
     <script>
-        // Gestione Tab
         function openTab(evt, tabName) {
             var i, tabcontent, tabbuttons;
             tabcontent = document.getElementsByClassName("tab-content");
@@ -378,16 +248,9 @@
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
-
-        // Bottone Torna su
         const btt = document.getElementById("backToTopBtn");
-        window.onscroll = function() {
-            if (window.scrollY > 300) { btt.style.display = "block"; } 
-            else { btt.style.display = "none"; }
-        };
-        btt.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        window.onscroll = function() { btt.style.display = window.scrollY > 300 ? "block" : "none"; };
+        btt.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
     </script>
 </body>
 </html>
