@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myScooter - Gestione e Supporto</title>
+    <title>myScooter - Supporto e Gestione</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -13,7 +13,7 @@
     <header>
         <img src="images/loghetto1.jpg" alt="Logo myScooter" class="header-logo">
         <h1>myScooter</h1>
-        <p>L'app definitiva per la gestione intelligente dei tuoi scooter. Tieni traccia di rifornimenti, consumi e manutenzione in un unico posto.</p>
+        <p>Gestisci i tuoi scooter e i rifornimenti senza stress. Semplice, scuro, moderno.</p>
     </header>
 
     <div class="container">
@@ -21,72 +21,66 @@
             <h2>Funzionalità principali</h2>
             <div class="features-grid">
                 <div class="feature-item">
-                    <h3><i class="fas fa-motorcycle"></i><br>Multi-Scooter</h3>
-                    <p>Gestisci più mezzi contemporaneamente con profili personalizzati.</p>
+                    <i class="fas fa-motorcycle"></i>
+                    <h3>Multi-Scooter</h3>
+                    <p>Aggiungi e gestisci tutti i tuoi mezzi in un unico posto.</p>
                 </div>
                 <div class="feature-item">
-                    <h3><i class="fas fa-gas-pump"></i><br>Rifornimenti</h3>
-                    <p>Monitora costi e litri. Calcoliamo noi la media dei consumi per te.</p>
+                    <i class="fas fa-gas-pump"></i>
+                    <h3>Rifornimenti</h3>
+                    <p>Registra ogni pieno e tieni d'occhio i costi e i consumi medi.</p>
                 </div>
                 <div class="feature-item">
-                    <h3><i class="fas fa-tools"></i><br>Manutenzione</h3>
-                    <p>Promemoria per tagliandi e scadenze tecniche (prossimamente).</p>
+                    <i class="fas fa-bell"></i>
+                    <h3>Manutenzione</h3>
+                    <p>Promemoria per tagliandi e scadenze (funzionalità in arrivo).</p>
                 </div>
             </div>
         </section>
 
         <section id="versioni-app">
-            <h2>Piattaforme supportate</h2>
+            <h2>Piattaforme</h2>
             <div class="tabs">
                 <button class="tab-button active" onclick="openTab(event, 'iOS')">iOS</button>
                 <button class="tab-button" onclick="openTab(event, 'Android')">Android</button>
-                <button class="tab-button" onclick="openTab(event, 'Merch')">Merchandising</button>
             </div>
 
             <div id="iOS" class="tab-content">
-                <h3>myScooter per iOS</h3>
-                <p>Esperienza fluida e nativa per iPhone (iOS 15+).</p>
-                <div class="image-gallery">
-                    <img src="ios-images/1.PNG" alt="Screen 1">
-                    <img src="ios-images/2.PNG" alt="Screen 2">
-                    <img src="ios-images/3.PNG" alt="Screen 3">
-                    <img src="ios-images/4.PNG" alt="Screen 4">
-                </div>
+                <h3>Disponibile per iPhone</h3>
+                <p>Un'app nativa costruita per darti il massimo delle performance su iOS.</p>
                 <div style="text-align:center; margin-top:2rem;">
-                    <a href="#" class="btn-small">Presto su App Store</a>
+                    <a href="#" class="btn-small">In attesa di approvazione</a>
                 </div>
             </div>
 
             <div id="Android" class="tab-content" style="display:none;">
-                <h3>myScooter per Android</h3>
-                <p>Compatibilità estesa e widget per la tua home. In fase di sviluppo.</p>
-                <div style="text-align:center; margin-top:2rem;">
-                    <a href="#" class="btn-small">In arrivo su Play Store</a>
-                </div>
-            </div>
-
-            <div id="Merch" class="tab-content" style="display:none;">
-                <h3>Coming Soon</h3>
-                <p>Il merchandising ufficiale di myScooter arriverà presto!</p>
+                <h3>Versione Android</h3>
+                <p>Stiamo lavorando duramente per portare myScooter su Google Play.</p>
             </div>
         </section>
 
         <section id="supporto">
-            <h2>Supporto Tecnico</h2>
-            <div class="support-details">
-                <p>Hai bisogno di assistenza o vuoi segnalare un problema? Contattaci direttamente:</p>
-                <a href="mailto:adriano.abbruzzese@gmail.com" class="support-email">adriano.abbruzzese@gmail.com</a>
-                <p>Il nostro team risponde solitamente entro 24 ore.</p>
-                <br>
-                <a href="https://github.com/rinino" target="_blank" class="btn-small">Segnala Bug su GitHub</a>
+            <h2>Supporto e Assistenza</h2>
+            <div class="support-grid">
+                <div class="support-item">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Contattaci</h3>
+                    <p>Hai domande o bisogno di aiuto?<br>Scrivici via email:</p>
+                    <a href="mailto:adriano.abbruzzese@gmail.com" style="color:var(--accent-color); font-weight:bold; text-decoration:none;">adriano.abbruzzese@gmail.com</a>
+                </div>
+                <div class="support-item">
+                    <i class="fas fa-bug"></i>
+                    <h3>Segnala un Bug</h3>
+                    <p>Aiutaci a migliorare segnalando problemi tecnici sulla nostra pagina GitHub.</p>
+                    <a href="https://github.com/rinino" target="_blank" class="btn-small">Vai a GitHub</a>
+                </div>
             </div>
         </section>
 
         <section id="privacy">
             <h2>Privacy Policy</h2>
-            <div class="privacy-details">
-                <p><strong>I tuoi dati non lasciano mai il telefono.</strong></p>
-                <p>myScooter salva ogni informazione localmente sul tuo dispositivo. Non usiamo server esterni e non vendiamo i tuoi dati a terze parti.</p>
+            <div style="text-align:center;">
+                <p>I tuoi dati rimangono sul tuo smartphone. Non usiamo server esterni, garantendo la tua massima riservatezza.</p>
             </div>
         </section>
     </div>
@@ -101,32 +95,29 @@
                 </div>
             </div>
             <div>
-                <p>Ti piace il progetto?</p>
+                <p>Ti piace myScooter?</p>
                 <a href="https://paypal.me/AdrianoAbbruzzese" target="_blank" class="donate-btn">
                     <i class="fab fa-paypal"></i> Offrimi un caffè
                 </a>
             </div>
         </div>
-        <p style="margin-top:2rem; font-size:0.8rem;">&copy; 2025 myScooter. Tutti i diritti riservati.</p>
     </footer>
 
-    <button id="backToTopBtn" title="Torna su"><i class="fas fa-arrow-up"></i></button>
+    <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tabbuttons;
             tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
+            for (i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
             tabbuttons = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tabbuttons.length; i++) { tabbuttons[i].className = tabbuttons[i].className.replace(" active", ""); }
+            for (i = 0; i < tabbuttons.length; i++) tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
 
         const btn = document.getElementById("backToTopBtn");
-        window.onscroll = function() {
-            btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
-        };
+        window.onscroll = function() { btn.style.display = (window.scrollY > 100) ? "block" : "none"; };
         btn.onclick = function() { window.scrollTo({top: 0, behavior: "smooth"}); };
     </script>
 </body>
