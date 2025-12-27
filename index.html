@@ -3,17 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myScooter - Gestisci i tuoi scooter e rifornimenti senza stress!</title>
+    <title>myScooter - Supporto e Gestione Scooter</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Stili aggiuntivi per la sezione Supporto e miglioramenti */
+        .support-section {
+            padding: 4rem 2rem;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .support-details {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .support-details h3 { color: #333; margin-top: 1.5rem; }
+        .support-email { 
+            font-size: 1.2rem; 
+            font-weight: 600; 
+            color: #007aff; 
+            text-decoration: none;
+        }
+        .footer-nav { margin-bottom: 1rem; }
+        .footer-nav a { color: #666; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        .footer-nav a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
 
     <header>
         <img src="images/loghetto1.jpg" alt="Logo myScooter" class="header-logo">
         <h1>myScooter</h1>
-        <p>L'app definitiva per la gestione semplice e intelligente dei tuoi scooter e dei loro rifornimenti. Tieni traccia di tutto, dalla manutenzione (in futuro) ai consumi, direttamente dal tuo smartphone!</p>
+        <p>L'app definitiva per la gestione semplice e intelligente dei tuoi scooter e dei loro rifornimenti. Tieni traccia di tutto, dalla manutenzione ai consumi, direttamente dal tuo smartphone!</p>
     </header>
 
     <div class="container">
@@ -44,15 +72,15 @@
             <div class="tabs">
                 <button class="tab-button active" onclick="openTab(event, 'iOS')">myScooter iOS</button>
                 <button class="tab-button" onclick="openTab(event, 'Android')">myScooter Android</button>
-                </div>
+            </div>
 
             <div id="iOS" class="tab-content">
                 <h3>myScooter per iOS</h3>
-                <h4>(in attesa di approvazione sullo store!!!)</h4>
+                <h4>(In attesa di approvazione sullo store)</h4>
                 <p>Progettata per l'ecosistema Apple, myScooter su iOS offre un'esperienza fluida e nativa. Goditi l'interfaccia utente pulita e le prestazioni ottimizzate per il tuo iPhone.</p>
                 <ul>
                     <li>Integrazione perfetta con l'interfaccia iOS.</li>
-                    <li>Notifiche push personalizzate per promemoria manutenzione. (in futuro)</li>
+                    <li>Notifiche push personalizzate per promemoria manutenzione (in futuro).</li>
                     <li>Disponibile per iOS 15 e successivi.</li>
                 </ul>
 
@@ -81,51 +109,64 @@
                     <li>Backup dei dati su Google Drive (futuro).</li>
                     <li>Disponibile per Android 10 e successivi.</li>
                 </ul>
-                    <div class="call-to-action-small">
+                <div class="call-to-action-small">
                     <p>Scarica myScooter per Android:</p>
                     <a href="#" class="btn-small">Presto su Google Play!</a>
                 </div>
             </div>
+        </section>
 
-            <div id="Merchandising" class="tab-content" style="display:none;">
-                <div class="merchandising-info">
-                    <h3>Prossimamente: Merchandising Ufficiale myScooter!</h3>
-                    <p>Resta sintonizzato per scoprire tutte le novità e le date di lancio. Non vediamo l'ora di condividere con te il nostro merchandising!</p>
-                    <img src="images/coming-soon-circle-design.png" alt="Immagine placeholder merchandising" class="merch-placeholder-img">
-                </div>
+        <section id="supporto" class="support-section">
+            <h2>Supporto e Assistenza</h2>
+            <div class="support-details">
+                <p>Hai riscontrato un problema, hai suggerimenti o hai bisogno di aiuto con l'app <strong>myScooter</strong>? Il nostro team di assistenza è pronto ad aiutarti.</p>
+                
+                <h3>📩 Contattaci via Email</h3>
+                <p>Per qualsiasi richiesta di supporto tecnico, scrivi a:</p>
+                <a href="mailto:adriano.abbruzzese@gmail.com" class="support-email">adriano.abbruzzese@gmail.com</a>
+                <p><small>Rispondiamo solitamente entro 24-48 ore lavorative.</small></p>
+
+                <h3>🛠️ Segnala un Bug</h3>
+                <p>Se preferisci, puoi aprire una segnalazione tecnica direttamente sulla nostra pagina GitHub:</p>
+                <a href="https://github.com/rinino" target="_blank" class="btn-small" style="display: inline-block; margin-top: 10px;">Vai a GitHub Issues</a>
             </div>
         </section>
-        
+
         <section id="privacy" class="privacy-section">
             <h2>La Tua Privacy è la Nostra Priorità</h2>
-            <p>In myScooter, crediamo che i tuoi dati debbano rimanere tuoi. Per questo motivo, l'applicazione è stata progettata con un approccio "Privacy-First".</p>
+            <p>In myScooter, crediamo che i tuoi dati debbano rimanere tuoi. L'applicazione è stata progettata con un approccio "Privacy-First".</p>
             
             <div class="privacy-details">
                 <h3>🚫 Nessun Invio a Terze Parti</h3>
-                <p>Nessuno dei tuoi dati (dettagli dello scooter, rifornimenti, costi, chilometri) viene inviato a server esterni, né tantomeno a terze parti per analisi, marketing o qualsiasi altro scopo.</p>
+                <p>Nessuno dei tuoi dati (dettagli dello scooter, rifornimenti, costi, chilometri) viene inviato a server esterni o terze parti.</p>
                 
                 <h3>🔒 Archiviazione Locale dei Dati</h3>
-                <p>Tutti i dati che inserisci in myScooter vengono **salvati esclusivamente sul tuo dispositivo mobile**. Se disinstalli l'app senza aver eseguito un backup manuale (funzionalità futura), tutti i tuoi dati verranno eliminati.</p>
+                <p>Tutti i dati inseriti vengono **salvati esclusivamente sul tuo dispositivo**. Se disinstalli l'app senza un backup manuale, i dati verranno rimossi definitivamente.</p>
                 
                 <h3>💡 Controllo Totale</h3>
-                <p>Hai il controllo completo sulla tua gestione. Poiché i dati sono locali, non è necessaria una connessione internet per utilizzare le funzionalità principali dell'app.</p>
+                <p>Non è necessaria una connessione internet per utilizzare le funzionalità principali dell'app.</p>
             </div>
         </section>
         
         <section class="call-to-action">
             <h2>Pronto a prendere il controllo del tuo scooter?</h2>
-            <p>Non lasciare nulla al caso. Scarica myScooter oggi stesso e rendi la gestione del tuo mezzo un gioco da ragazzi!</p>
+            <p>Scarica myScooter oggi stesso e rendi la gestione del tuo mezzo un gioco da ragazzi!</p>
             <a href="#" class="btn">Scarica per Android</a>
             <a href="#" class="btn" style="margin-left: 1rem;">Scarica per iOS</a>
         </section>
     </div>
 
     <footer>
+        <nav class="footer-nav">
+            <a href="#funzionalita">Funzionalità</a> | 
+            <a href="#supporto">Supporto</a> | 
+            <a href="#privacy">Privacy Policy</a>
+        </nav>
         <p>&copy; 2025 myScooter. Tutti i diritti riservati.</p>
         <div class="author-info">
             <p>Sviluppato con passione da Adriano Abbruzzese</p>
             <div class="social-links">
-                <a href="www.linkedin.com/in/adrianoabbruzzese" target="_blank" aria-label="Profilo LinkedIn">
+                <a href="https://www.linkedin.com/in/adrianoabbruzzese" target="_blank" aria-label="Profilo LinkedIn">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
                 <a href="https://github.com/rinino" target="_blank" aria-label="Repository GitHub del progetto">
@@ -138,7 +179,7 @@
                     <i class="fab fa-paypal"></i> Donate
                 </a>
             </div>
-            </div>
+        </div>
     </footer>
 
     <button id="backToTopBtn" title="Torna su">
@@ -146,7 +187,6 @@
     </button>
 
     <script>
-        // Il tuo script esistente per i tab openTab(evt, tabName)
         function openTab(evt, tabName) {
             var i, tabcontent, tabbuttons;
             tabcontent = document.getElementsByClassName("tab-content");
@@ -161,10 +201,8 @@
             evt.currentTarget.className += " active";
         }
 
-        // Nuovo script per il pulsante "Torna su"
         const backToTopBtn = document.getElementById("backToTopBtn");
 
-        // Mostra il pulsante quando si scorre in giù di 20px dalla cima
         window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 backToTopBtn.style.display = "block";
@@ -173,11 +211,10 @@
             }
         };
 
-        // Quando l'utente clicca sul pulsante, scorri fino all'inizio del documento
         backToTopBtn.addEventListener("click", function() {
             window.scrollTo({
                 top: 0,
-                behavior: "smooth" // Animazione di scorrimento fluida
+                behavior: "smooth"
             });
         });
     </script>
