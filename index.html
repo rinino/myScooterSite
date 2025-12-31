@@ -20,9 +20,21 @@
         <section id="features">
             <h2>Funzionalità</h2>
             <div class="features-grid">
-                <div class="card"><i class="fas fa-motorcycle"></i><h3>Multi-Scooter</h3><p>Aggiungi e gestisci tutti i tuoi mezzi velocemente.</p></div>
-                <div class="card"><i class="fas fa-gas-pump"></i><h3>Rifornimenti</h3><p>Monitora costi e consumi medi di ogni pieno.</p></div>
-                <div class="card"><i class="fas fa-tools"></i><h3>Scadenze</h3><p>Promemoria per tagliandi e manutenzione (prossimamente).</p></div>
+                <div class="card">
+                    <i class="fas fa-motorcycle"></i>
+                    <h3>Multi-Scooter</h3>
+                    <p>Aggiungi e gestisci tutti i tuoi mezzi velocemente.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-gas-pump"></i>
+                    <h3>Rifornimenti</h3>
+                    <p>Monitora costi e consumi medi di ogni pieno.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Scadenze</h3>
+                    <p>Promemoria per tagliandi e manutenzione (prossimamente).</p>
+                </div>
             </div>
         </section>
 
@@ -32,26 +44,55 @@
                 <button class="tab-btn active" onclick="showTab('ios')">iOS</button>
                 <button class="tab-btn" onclick="showTab('android')">Android</button>
             </div>
+
             <div id="ios-tab">
+                <div class="mini-badge-container">
+                    <a href="#" onclick="alert('La versione iOS è in fase di validazione.'); return false;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="mini-badge">
+                    </a>
+                </div>
                 <div class="image-gallery">
-                    <img src="ios-images/1.PNG" alt="Screen 1">
-                    <img src="ios-images/2.PNG" alt="Screen 2">
-                    <img src="ios-images/3.PNG" alt="Screen 3">
-                    <img src="ios-images/4.PNG" alt="Screen 4">
-                    <img src="ios-images/5.PNG" alt="Screen 5">
-                    <img src="ios-images/6.PNG" alt="Screen 6">
-                    <img src="ios-images/7.PNG" alt="Screen 7">
-                    <img src="ios-images/8.PNG" alt="Screen 8">
+                    <img src="ios-images/1.PNG" alt="iOS Screen 1">
+                    <img src="ios-images/2.PNG" alt="iOS Screen 2">
+                    <img src="ios-images/3.PNG" alt="iOS Screen 3">
+                    <img src="ios-images/4.PNG" alt="iOS Screen 4">
+                    <img src="ios-images/5.PNG" alt="iOS Screen 5">
+                    <img src="ios-images/6.PNG" alt="iOS Screen 6">
+                    <img src="ios-images/7.PNG" alt="iOS Screen 7">
+                    <img src="ios-images/8.PNG" alt="iOS Screen 8">
                 </div>
             </div>
-            <div id="android-tab" style="display:none; text-align: center; padding: 2rem;">
-               <div class="image-gallery">
-                    <img src="and-images/1.jpg" alt="Screen 1">
-                    <img src="and-images/2.jpg" alt="Screen 2">
-                    <img src="and-images/3.jpg" alt="Screen 3">
-                    <img src="and-images/4.jpg" alt="Screen 4">
-                    <img src="and-images/5.jpg" alt="Screen 5">
+
+            <div id="android-tab" hidden>
+                <div class="mini-badge-container">
+                    <a href="https://play.google.com/store/apps/details?id=com.myscooter.app" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="mini-badge">
+                    </a>
                 </div>
+                <div class="image-gallery">
+                    <img src="and-images/1.jpg" alt="Android Screen 1">
+                    <img src="and-images/2.jpg" alt="Android Screen 2">
+                    <img src="and-images/3.jpg" alt="Android Screen 3">
+                    <img src="and-images/4.jpg" alt="Android Screen 4">
+                    <img src="and-images/5.jpg" alt="Android Screen 5">
+                </div>
+            </div>
+        </section>
+
+       <section class="status-container">
+            <h2>Scarica myScooter</h2>
+            <p class="text-muted-custom">Inquadra il QR Code per essere indirizzato allo store corretto o clicca sui badge qui sotto.</p>
+            
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://rinino.github.io/myScooterSite/download.html" alt="QR Code" class="qr-small">
+            
+            <div class="mini-badge-container">
+                <a href="https://play.google.com/store/apps/details?id=com.myscooter.app" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Scarica per Android" class="mini-badge">
+                </a>
+                
+                <a href="#" onclick="alert('La versione iOS è in fase di validazione. Sarà disponibile a breve!'); return false;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Scarica per iOS" class="mini-badge">
+                </a>
             </div>
         </section>
 
@@ -61,17 +102,17 @@
                 <div class="card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <a href="mailto:adriano.abbruzzese@gmail.com" style="color:var(--accent-color); text-decoration:none; font-weight:700;">adriano.abbruzzese@gmail.com</a>
+                    <a href="mailto:adriano.abbruzzese@gmail.com">adriano.abbruzzese@gmail.com</a>
                 </div>
                 <div class="card">
                     <i class="fab fa-github"></i>
                     <h3>GitHub</h3>
-                    <a href="https://github.com/rinino" target="_blank" style="color:var(--accent-color); text-decoration:none; font-weight:700;">Segnala un Bug</a>
+                    <a href="https://github.com/rinino" target="_blank">Segnala un Bug</a>
                 </div>
             </div>
 
             <div class="form-container">
-                <h3 style="text-align: center; color: var(--accent-color);">Invia un messaggio</h3>
+                <h3>Invia un messaggio</h3>
                 <form action="https://formspree.io/adriano.abbruzzese@gmail.com" method="POST">
                     <div class="form-group">
                         <label>Tua Email</label>
@@ -88,7 +129,7 @@
 
         <section>
             <h2>Privacy</h2>
-            <p style="text-align: center;">myScooter salva i dati solo localmente sul tuo telefono. Nessun dato viene condiviso.</p>
+            <p class="text-muted-custom">myScooter salva i dati solo localmente sul tuo telefono. Nessun dato viene condiviso.</p>
         </section>
     </div>
 
@@ -103,22 +144,26 @@
             </div>
             <a href="https://paypal.me/AdrianoAbbruzzese" target="_blank" class="donate-btn"><i class="fab fa-paypal"></i> Offrimi un caffè</a>
         </div>
-         <p style="margin-top: 3rem; color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 myScooter. Tutti i diritti riservati.</p>
+        <p class="text-muted-custom">&copy; 2026 myScooter. Tutti i diritti riservati.</p>
     </footer>
 
-    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+    <button id="backToTop" hidden><i class="fas fa-arrow-up"></i></button>
 
     <script>
         function showTab(type) {
-            document.getElementById('ios-tab').style.display = type === 'ios' ? 'block' : 'none';
-            document.getElementById('android-tab').style.display = type === 'android' ? 'block' : 'none';
+            const ios = document.getElementById('ios-tab');
+            const and = document.getElementById('android-tab');
             const btns = document.querySelectorAll('.tab-btn');
+            
+            ios.hidden = (type !== 'ios');
+            and.hidden = (type !== 'android');
+            
             btns[0].classList.toggle('active', type === 'ios');
             btns[1].classList.toggle('active', type === 'android');
         }
 
         const btn = document.getElementById("backToTop");
-        window.onscroll = () => { btn.style.display = window.scrollY > 300 ? "block" : "none"; };
+        window.onscroll = () => { btn.hidden = window.scrollY <= 300; };
         btn.onclick = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
     </script>
 </body>

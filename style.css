@@ -143,3 +143,66 @@ footer {
 }
 
 @media (min-width: 768px) { .footer-flex { flex-direction: row; justify-content: center; gap: 6rem; } }
+
+/* --- Stili specifici per Download Page --- */
+.status-container {
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 6px solid var(--primary-dark);
+    border-top: 6px solid var(--accent-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.1);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.text-muted-custom {
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.status-container {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* QR Code rimpicciolito */
+.qr-small {
+    max-width: 120px; /* Più piccolo rispetto alla home */
+    margin: 1.5rem auto;
+    border: 5px solid white;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Contenitore badge piccoli */
+.mini-badge-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.mini-badge {
+    height: 40px; /* Badge rimpiccioliti */
+    transition: transform 0.2s;
+}
+
+.mini-badge:hover {
+    transform: scale(1.05);
+}
