@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Reindirizzamento a myScooter...</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; background: #1a1a1a; color: white; }
+        .loader { border: 5px solid #333; border-top: 5px solid #00bcd4; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 20px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <h2>Ti stiamo portando sullo store...</h2>
+    <div class="loader"></div>
+    <p>Se non vieni reindirizzato, <a href="https://rinino.github.io/myScooterSite/" style="color: #00bcd4;">clicca qui</a>.</p>
+
+    <script>
+        const iosLink = "https://apps.apple.com/it/app/myscooter/id6756546027";
+        const androidLink = "https://play.google.com/store/apps/details?id=it.adr.myscooter";
+
+        function redirect() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = iosLink;
+            } else if (/android/i.test(userAgent)) {
+                window.location.href = androidLink;
+            } else {
+                // Se sono da PC, li rimando alla home del sito
+                window.location.href = "https://rinino.github.io/myScooterSite/";
+            }
+        }
+
+        // Esegue il redirect dopo 1 secondo di attesa (per far vedere il loader)
+        setTimeout(redirect, 1000);
+    </script>
+</body>
+</html>
