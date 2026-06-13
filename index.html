@@ -51,6 +51,9 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="mini-badge">
                     </a>
                 </div>
+                
+                <p class="version-label">Versione: v2.0</p>
+
                 <div class="image-gallery">
                     <img src="ios-images/2.0/1.png" alt="iOS Screen 1">
                     <img src="ios-images/2.0/2.png" alt="iOS Screen 2">
@@ -61,7 +64,7 @@
                     <img src="ios-images/2.0/7.png" alt="iOS Screen 7">
                 </div>
                 <div style="text-align: center; margin-top: 15px;">
-                    <a href="vecchie-versioni.html" style="color: #007bff; text-decoration: none; font-size: 0.9em;"><i class="fas fa-history"></i> Visualizza gli screen della versione precedente</a>
+                    <a href="vecchie-versioni.html" class="accent-link" style="font-size: 0.9em;"><i class="fas fa-history"></i> Visualizza gli screen della versione 1.7</a>
                 </div>
             </div>
 
@@ -71,8 +74,10 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="mini-badge">
                     </a>
                 </div>
+
+                <p class="version-label">Versione: v2.0</p>
+
                 <div class="image-gallery">
-                    <!-- Nuove immagini Android Offuscate (v2.0) -->
                     <img src="and-images/2.0/1.png" alt="Android Screen 1">
                     <img src="and-images/2.0/2.png" alt="Android Screen 2">
                     <img src="and-images/2.0/3.png" alt="Android Screen 3">
@@ -83,7 +88,7 @@
                     <img src="and-images/2.0/8.png" alt="Android Screen 8">
                 </div>
                 <div style="text-align: center; margin-top: 15px;">
-                    <a href="vecchie-versioni.html" style="color: #007bff; text-decoration: none; font-size: 0.9em;"><i class="fas fa-history"></i> Visualizza gli screen della versione precedente</a>
+                    <a href="vecchie-versioni.html" class="accent-link" style="font-size: 0.9em;"><i class="fas fa-history"></i> Visualizza gli screen della versione 1.7</a>
                 </div>
             </div>
         </section>
@@ -92,7 +97,6 @@
             <h2>Scarica myScooter</h2>
             <p class="text-muted-custom">Inquadra il QR Code per accedere subito agli store ufficiali.</p>
             
-            <!-- <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://rinino.github.io/myScooterSite/" alt="QR Code myScooter" class="qr-small"> -->
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://rinino.github.io/myScooterSite/download.html" alt="QR Code myScooter" class="qr-small">
             <div class="mini-badge-container">
                 <a href="https://play.google.com/store/apps/details?id=it.adr.myscooter" target="_blank">
@@ -107,20 +111,22 @@
 
         <section id="support">
             <h2>Supporto Tecnico</h2>
-            <div class="support-grid">
-                <div class="card">
+            
+            <div class="card card-support-combined">
+                <div class="support-item email-contact">
                     <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
                     <a href="mailto:adriano.abbruzzese@gmail.com">adriano.abbruzzese@gmail.com</a>
                 </div>
-                <div class="card">
+                
+                <div class="support-divider"></div>
+
+                <div class="support-item github-bug">
                     <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
                     <a href="https://github.com/rinino" target="_blank">Segnala un Bug</a>
                 </div>
             </div>
 
-            <div class="form-container">
+            <div class="form-container form-larger">
                 <h3>Invia un messaggio</h3>
                 <form action="https://formspree.io/adriano.abbruzzese@gmail.com" method="POST">
                     <div class="form-group">
@@ -129,7 +135,7 @@
                     </div>
                     <div class="form-group">
                         <label>Messaggio</label>
-                        <textarea name="message" rows="4" required placeholder="Come posso aiutarti?"></textarea>
+                        <textarea name="message" rows="8" required placeholder="Come posso aiutarti?"></textarea>
                     </div>
                     <button type="submit" class="btn-submit">Invia Richiesta</button>
                 </form>
@@ -142,9 +148,8 @@
                 <p class="text-muted-custom" style="margin-bottom: 20px;">
                     myScooter salva i dati localmente sul tuo telefono e anche su uno storage on line, protetto e sicuro, in modo da poterle visualizzare aprendo l'applicazione da tutti i dispositivi che si desidera. Le informazioni sono protette.
                 </p>
-                <a href="cancellazione-dati.html" style="color: #007bff; text-decoration: none; font-weight: bold;">Scopri come gestire e cancellare i tuoi dati <i class="fas fa-arrow-right"></i></a>
+                <a href="cancellazione-dati.html" class="accent-link" style="font-weight: bold;">Scopri come gestire e cancellare i tuoi dati <i class="fas fa-arrow-right"></i></a>
             </div>
-        </section>
         </section>
     </div>
 
@@ -162,7 +167,7 @@
         <p class="text-muted-custom">&copy; 2026 myScooter. Tutti i diritti riservati.</p>
     </footer>
 
-    <button id="backToTop" hidden><i class="fas fa-arrow-up"></i></button>
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
 
     <script>
         function showTab(type) {
@@ -178,7 +183,7 @@
         }
 
         const btn = document.getElementById("backToTop");
-        window.onscroll = () => { btn.hidden = window.scrollY <= 300; };
+        window.onscroll = () => { btn.style.display = window.scrollY <= 300 ? 'none' : 'block'; };
         btn.onclick = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
     </script>
 </body>

@@ -206,3 +206,143 @@ footer {
 .mini-badge:hover {
     transform: scale(1.05);
 }
+
+/* --- NUOVI STILI SPOSTATI DALLE PAGINE HTML --- */
+
+/* 1. Stili per l'etichetta della versione v2.0 nelle card principali */
+.version-label {
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin: -5px 0 10px 0;
+}
+
+/* 2. Stili per la card combinata e rimpicciolita del supporto */
+.card-support-combined {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    /* Eredita stili base da .card ma sovrascrive layout */
+    background-color: var(--primary-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.card-support-combined .support-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+
+/* Icone più piccole nella card combinata */
+.card-support-combined i {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+/* Testo dei link più piccolo nella card combinata */
+.card-support-combined a {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.card-support-combined a:hover {
+    color: var(--accent-hover);
+}
+
+/* Linea di separazione verticale */
+.card-support-combined .support-divider {
+    height: 60px;
+    width: 2px;
+    background-color: var(--border-color);
+    display: block;
+}
+
+/* 3. Stili per il form ingrandito del supporto */
+.form-larger {
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.form-larger h3 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.form-larger .form-group label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.form-larger .form-group input,
+.form-larger .form-group textarea {
+    padding: 18px;
+    font-size: 1em;
+}
+
+.form-larger textarea {
+    resize: vertical;
+}
+
+/* --- Adattamenti per pagina Cancellazione Dati scura --- */
+/* Stili specifici per mantenere coerenza con il layout 'section' scuro */
+.content-page-section {
+    text-align: left;
+}
+
+.content-page-section h2 {
+    text-align: left;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content-page-section ul {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.content-page-section li {
+    margin-bottom: 0.5rem;
+}
+
+.content-page-section strong {
+    color: var(--text-light);
+}
+
+.content-page-section em {
+    color: var(--accent-color);
+}
+
+.content-page-section .warning-text {
+    color: #e74c3c; /* Manteniamo il rosso per l'avviso, adattato per scuro */
+    font-weight: bold;
+}
+
+.back-btn-container {
+    margin-bottom: 2rem;
+}
+
+.back-btn {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: var(--accent-hover);
+    transform: translateX(-5px);
+}
