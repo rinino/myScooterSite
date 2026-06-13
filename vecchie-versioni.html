@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versioni Precedenti - myScooter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="images/loghetto1.jpg" alt="Logo myScooter" class="header-logo">
+        <h1>myScooter</h1>
+        <p>Galleria storica delle versioni precedenti.</p>
+    </header>
+
+    <div class="container">
+        <section id="app">
+            <div style="margin-bottom: 20px; text-align: left;">
+                <a href="index.html" style="color: #007bff; text-decoration: none; font-weight: 600;"><i class="fas fa-arrow-left"></i> Torna alla Home</a>
+            </div>
+
+            <h2>Interfaccia Vecchia Versione</h2>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('ios')">iOS</button>
+                <button class="tab-btn" onclick="showTab('android')">Android</button>
+            </div>
+
+            <div id="ios-tab">
+                <div class="image-gallery">
+                    <img src="ios-images/1.PNG" alt="iOS Old Screen 1">
+                    <img src="ios-images/2.PNG" alt="iOS Old Screen 2">
+                    <img src="ios-images/3.PNG" alt="iOS Old Screen 3">
+                    <img src="ios-images/4.PNG" alt="iOS Old Screen 4">
+                    <img src="ios-images/5.PNG" alt="iOS Old Screen 5">
+                    <img src="ios-images/6.PNG" alt="iOS Old Screen 6">
+                    <img src="ios-images/7.PNG" alt="iOS Old Screen 7">
+                    <img src="ios-images/8.PNG" alt="iOS Old Screen 8">
+                </div>
+            </div>
+
+            <div id="android-tab" hidden>
+                <div class="image-gallery">
+                    <img src="and-images/1.jpg" alt="Android Old Screen 1">
+                    <img src="and-images/2.jpg" alt="Android Old Screen 2">
+                    <img src="and-images/3.jpg" alt="Android Old Screen 3">
+                    <img src="and-images/4.jpg" alt="Android Old Screen 4">
+                    <img src="and-images/5.jpg" alt="Android Old Screen 5">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p class="text-muted-custom">&copy; 2026 myScooter. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        function showTab(type) {
+            const ios = document.getElementById('ios-tab');
+            const and = document.getElementById('android-tab');
+            const btns = document.querySelectorAll('.tab-btn');
+            
+            ios.hidden = (type !== 'ios');
+            and.hidden = (type !== 'android');
+            
+            btns[0].classList.toggle('active', type === 'ios');
+            btns[1].classList.toggle('active', type === 'android');
+        }
+    </script>
+</body>
+</html>
