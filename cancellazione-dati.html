@@ -7,13 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .content-page { max-width: 800px; margin: 50px auto; padding: 20px; text-align: left; background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .content-page h1, .content-page h2 { color: #333; }
-        .content-page p, .content-page li { color: #555; line-height: 1.8; }
-        .back-btn { display: inline-block; margin-bottom: 20px; color: #007bff; text-decoration: none; font-weight: 600; }
-        .back-btn:hover { text-decoration: underline; }
-    </style>
 </head>
 <body>
 
@@ -23,33 +16,35 @@
     </header>
 
     <div class="container">
-        <div class="content-page">
-            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Torna alla Home</a>
+        <section>
+            <div style="margin-bottom: 20px; text-align: left;">
+                <a href="index.html" style="color: #007bff; text-decoration: none; font-weight: 600;"><i class="fas fa-arrow-left"></i> Torna alla Home</a>
+            </div>
             
-            <h1>Richiesta di Cancellazione Dati</h1>
-            <p>La tua privacy è importante per noi. L'app <strong>myScooter</strong> è stata progettata per garantire la massima sicurezza dei tuoi dati.</p>
+            <h2>Gestione e Cancellazione Dati</h2>
             
-            <h2>Dove sono salvati i miei dati?</h2>
-            <p>Tutti i dati inseriti nell'app (veicoli, rifornimenti, scadenze) vengono salvati <strong>esclusivamente in locale</strong> sul tuo dispositivo. Non utilizziamo server cloud, database esterni o servizi di tracciamento di terze parti per conservare le tue informazioni.</p>
+            <div class="card" style="text-align: left; margin-bottom: 20px;">
+                <h3><i class="fas fa-cloud"></i> Dove sono salvati i miei dati?</h3>
+                <p class="text-muted-custom">Per offrirti la comodità di accedere da più dispositivi, myScooter salva i tuoi dati localmente sul dispositivo e li sincronizza in modo sicuro su uno storage online protetto.</p>
+            </div>
 
-            <h2>Come posso cancellare i miei dati?</h2>
-            <p>Poiché non abbiamo accesso ai tuoi dati e tutto rimane sul tuo dispositivo, puoi eliminare tutte le informazioni in totale autonomia senza doverci inviare alcuna richiesta formale. Puoi farlo in due modi:</p>
-            
-            <ul>
-                <li><strong>Direttamente dall'App (Opzione Consigliata per iOS):</strong> Apri l'app myScooter, recati nella sezione <strong>Profilo</strong> e utilizza la funzione dedicata per la cancellazione dei dati.</li>
-                <li><strong>Tramite le impostazioni del dispositivo:</strong>
-                    <ul>
-                        <li><strong>Dispositivi iOS:</strong> Puoi anche rimuovere i dati semplicemente disinstallando l'app dalla schermata Home.</li>
-                        <li><strong>Dispositivi Android:</strong> Puoi disinstallare l'app, oppure azzerare i dati senza disinstallarla andando in <em>Impostazioni > App > myScooter > Spazio di archiviazione</em> e selezionando <strong>"Cancella dati"</strong>.</li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="card" style="text-align: left; margin-bottom: 20px;">
+                <h3><i class="fas fa-trash-alt"></i> Come posso cancellare i miei dati?</h3>
+                <p>Puoi eliminare definitivamente il tuo account e tutti i dati associati (sia locali che cloud) in totale autonomia. Per farlo:</p>
+                
+                <ul style="margin-top: 15px; padding-left: 20px; line-height: 1.8;">
+                    <li><strong>Dall'applicazione (Metodo Consigliato):</strong> Apri l'app myScooter, recati nella sezione <strong>Profilo</strong> e utilizza la funzione dedicata alla cancellazione dei dati/account. Questa operazione rimuoverà immediatamente i dati dai nostri server sicuri.</li>
+                    <li><strong>Attenzione alla disinstallazione:</strong> Rimuovere semplicemente l'app dal telefono cancellerà i dati locali, ma per eliminare definitivamente il tuo profilo dal cloud protetto ti invitiamo a usare la funzione interna dell'app descritta sopra.</li>
+                </ul>
 
-            <p style="color: #e74c3c; font-weight: bold;">Nota bene: questa operazione cancellerà tutto il tuo storico. Poiché non disponiamo di backup remoti, i dati cancellati non potranno essere recuperati in alcun modo.</p>
+                <p style="margin-top: 15px; color: #e74c3c; font-weight: bold;">Nota bene: questa operazione è irreversibile. I dati cancellati non potranno essere recuperati.</p>
+            </div>
             
-            <h2>Hai bisogno di ulteriore supporto?</h2>
-            <p>Se hai altre domande riguardanti la privacy o l'app, puoi contattare lo sviluppatore all'indirizzo email: <a href="mailto:adriano.abbruzzese@gmail.com">adriano.abbruzzese@gmail.com</a>.</p>
-        </div>
+            <div class="card" style="text-align: left;">
+                <h3><i class="fas fa-headset"></i> Hai bisogno di aiuto?</h3>
+                <p class="text-muted-custom">Se non hai più l'app installata o non riesci ad accedere al tuo profilo per procedere con la cancellazione, puoi richiederla manualmente contattando lo sviluppatore: <a href="mailto:adriano.abbruzzese@gmail.com">adriano.abbruzzese@gmail.com</a>.</p>
+            </div>
+        </section>
     </div>
 
     <footer>
